@@ -10,15 +10,7 @@ jobs:
     env:
       working-directory: terraform
       TF_WORKSPACE: my-workspace
-    steps:
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-region: eu-west-1
-
-      - name: Check out code
-        uses: actions/checkout@v2
-        
+    steps:        
       - name: Run Terrascan
         id: terrascan
         uses: accurics/terrascan-action@main
